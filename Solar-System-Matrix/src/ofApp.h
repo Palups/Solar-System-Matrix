@@ -1,6 +1,9 @@
 #pragma once
 
 #include "ofMain.h"
+#include "Astro.h"
+
+#define QUANTIDADE 300
 
 class ofApp : public ofBaseApp{
 
@@ -20,5 +23,13 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-		
+
+		Astro *sol;
+		Astro *terra;
+		Astro *lua;
+
+		float anguloTerra;
+		float anguloLua;
+
+		ofVec2f estrelas[QUANTIDADE];
 };
